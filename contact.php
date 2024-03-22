@@ -1,3 +1,11 @@
+<?php 
+include("config.php");
+include("firebaseRDB.php");
+
+if(!isset($_SESSION['user'])){
+    header("location: login.php");
+}
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -9,32 +17,55 @@
     </head>
     <body>
         <div class="header"> 
-            <div class="left">Hospital</div>
+            <div onclick="home()" class="left">Hospital</div>
+            <script>
+                function home(){
+                    window.location = "home.php";
+                }
+            </script>
             <div class="middle">
                 <div></div>
-                <button class="general">
+                <button onclick="general()" class="general">
                     <div>TỔNG QUAN</div>
                 </button>
-                <button class="contact">
+                <button onclick="contact()" class="contact">
                     <div>THÔNG TIN LIÊN HỆ</div>
                 </button>
-                <button class="treatment">
+                <button onclick="treatment()" class="treatment">
                     <div>QUẢN LÝ BÁC SĨ</div>
                 </button>
-                <button class="patient">
+                <button onclick="patient()" class="patient">
                     <div>QUẢN LÝ NGƯỜI BỆNH</div>
                 </button>
-                <button class="medicine">
+                <button onclick="medicine()" class="medicine">
                     <div>QUẢN LÝ THUỐC</div>
                 </button> 
-                <button class="device">
+                <button onclick="device()" class="device">
                     <div>THIẾT BỊ Y TẾ</div>
                 </button>
+                <script>
+                    function general(){
+                        window.location = "generalPage.php";
+                    }
+                    function contact(){
+                        window.location = "contact.php";
+                    }
+                    function treatment(){
+                        window.location = "doctor.php";
+                    }
+                    function patient(){
+                        window.location = "patient.php";
+                    }
+                    function medicine(){
+                        window.location = "medicine.php";
+                    }
+                    function device(){
+                        window.location = "device.php";
+                    }
+                </script>
             </div>
             <div class="right">
-                <button class="login">
-                    <div>login</div>
-                </button> 
+                <div class="login">Xin chào <?php echo $_SESSION['user']['Username'];?>, <a class="login logout" href="logout.php">Thoát</a></div>
             </div>
         </div>
         <div class="contactTitle">

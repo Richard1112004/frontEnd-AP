@@ -70,14 +70,22 @@ body{
 .login{
     color: rgb(58, 8, 8);
     height: 30px;
-    width: 80px;
+    width: 90px;
     display:flex;
     justify-content: center;
     align-items: center;
-    margin-left: 60px;
+    /* margin-left: 60px; */
     font-size: 15px;
-    cursor: pointer;
     border-radius: 10px;
+    box-sizing: border-box;
+}
+.logout{
+    margin-left: 10px;
+    text-decoration: underline;
+}
+.logout:hover{
+    cursor: pointer;
+    color: rgb(196, 26, 26);
 }
 .end-of-page{
     display: flex;
