@@ -19,9 +19,10 @@
     color: rgb(58, 8, 8);
 }
 .info-container{
-    height: 1000px;
+    height: 600px;
     padding-left: 166.4px;
     padding-right: 166.4px;
+    overflow-y: scroll;
 }
 .info{
     text-align: center;

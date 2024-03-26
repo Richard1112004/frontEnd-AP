@@ -71,7 +71,8 @@ if(!isset($_SESSION['user'])){
         <div class="find">
             <h2>TÌM BÁC SĨ</h2> <br> <br>
             <p>Vui lòng chọn chuyên khoa cần khám hoặc tìm kiếm để nhanh hơn</p> <br>
-            <form action="/doctor.php" method="get">
+            <form action="doctor-action.php" method="post">
+<!-- need input ID doctor -->
                 <select class="select" name="specialty-doctor-select">
                     <option value="All" class="doctor">Tìm kiếm chuyên ngành</option>
                     <option value="Nội khoa" class="doctor">Nội khoa</option>
