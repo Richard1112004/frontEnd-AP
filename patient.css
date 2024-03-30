@@ -8,12 +8,38 @@
     padding: 48px 16px;
 }
 .find input{
-    font-size: 25px;
+    font-size: 18px;
     border-radius: 34px;
     margin: 0px;
     padding: 12px 24px;
     text-overflow: ellipsis;
     color: rgb(58, 8, 8);
+}
+.find input:focus{
+    outline: none;
+}
+.search-button{
+    color: white;
+    height: 48px;
+    width: 48px;
+    background-color: rgb(58, 8, 8);
+    border-width: 1px;
+    border-style: solid;
+    /* border-color: white; */
+    margin-left: -10;
+    margin-right: 10px;
+    /* border-radius: 10px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 337px;
+    top: 226px;
+    cursor: pointer;
+}
+.search-icon{
+    height: 60%;
+    width: 60%px;
 }
 .patient-info-container{
     padding-left: 100px;

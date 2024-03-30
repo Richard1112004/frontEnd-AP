@@ -65,18 +65,18 @@ if(!isset($_SESSION['user'])){
                 </script>
             </div>
             <div class="right">
-                <div class="login"><?php echo $_SESSION['user']['Username'];?>, <a class="login logout" href="logout.php">Thoát</a></div>
+                <div class="login"><span><?php  echo $_SESSION['user']['Username']?></span> <a class="logout" href="logout.php">Thoát</a></div>
             </div>
         </div>
         <div class="body-of-page">
             <p class="hello">Chào mừng đến với bệnh viện đại học Bách Khoa</p>
             <div class="ima-container">
-                <form action="home.php" method="get">
+                <!-- <form action="home.php" method="get">
                     <input class="search-bar" type = "text" placeholder="Tìm kiếm" name="Tìm kiếm">
-                </form>
-                <button class="search-button">
+                </form> -->
+                <!-- <button class="search-button">
                     <img class="search-icon" src="icon/search-replace.png">
-                </button>
+                </button> -->
             </div>
             <div class="infor">
                 <p class="begin">Bệnh viện Đại học Bách Khoa không chỉ là một cơ sở y tế tiên tiến, mà còn là biểu tượng của sự chất lượng và

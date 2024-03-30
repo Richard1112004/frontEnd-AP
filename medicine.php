@@ -65,7 +65,7 @@ if(!isset($_SESSION['user'])){
                 </script>
             </div>
             <div class="right">
-                <div class="login">Xin chào <?php echo $_SESSION['user']['Username'];?>, <a class="login logout" href="logout.php">Thoát</a></div>
+                <div class="login"><span><?php  echo $_SESSION['user']['Username']?></span> <a class="logout" href="logout.php">Thoát</a></div>
             </div>
         </div>
         <div class="find">
@@ -96,6 +96,9 @@ if(!isset($_SESSION['user'])){
                     <option value="Nguy hiểm" class="doctor">Nguy hiểm</option>
                 </select>
                 <input type = "text" placeholder="Tìm kiếm tên thuốc">
+                <button class="search-button">
+                    <img class="search-icon" src="icon/search-replace.png">
+                </button>
             </form>
         </div>
         <div class="medicine1">

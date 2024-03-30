@@ -1,11 +1,3 @@
-<?php 
-include("config.php");
-include("firebaseRDB.php");
-
-if(!isset($_SESSION['user'])){
-    header("location: login.php");
-}
-?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -68,12 +60,12 @@ if(!isset($_SESSION['user'])){
                     // Bắt sự kiện click vào nút chỉnh sửa
                     $("#editButton").click(function(){
                         // Lấy nội dung hiện tại của phần tử bạn muốn chỉnh sửa
-                        var doctor_name = $(".doctor_name_modal").text().trim();
-                        var subject = $(".subject_modal").text().trim()
+                        // var doctor_name = $(".doctor_name_modal").text().trim();
+                        // var subject = $(".subject_modal").text().trim()
                         var schedul = $(".time_modal").text().trim()
+                        var patient = $(".detail-patient").text().trim()
                         // Hiển thị input để người dùng chỉnh sửa
-                        $(".doctor_name_modal").html("<input type='text' id='editDocterName' class='form-control' value='" + doctor_name + "'>");
-                        $(".subject_modal").html("<input type='text' id='editSubject' class='form-control' value='" + subject + "'>");
+                        $(".detail-patient").html("<input type='text' id='editSubject' class='form-control' value='" + patient + "'>");
                         $(".time_modal").html("<input type='text' id='editSchedul' class='form-control' value='" + schedul + "'>");
                         // Ẩn nút chỉnh sửa và hiển thị nút lưu
                         $("#editButton").hide();
@@ -152,46 +144,27 @@ if(!isset($_SESSION['user'])){
         <br> <br>
         <div class="info-container">
             <div class="info">
-            <a href="#" data-toggle="modal" data-target="#myModal" id = "doctor_name">GS TS BS. Nguyễn Phúc Hưng</a>  <br>
-                <p class="subject">Tổng giám đốc của công ti</p>
-                <div class="scheduling-container">
-                    <p class="scheduling">Lịch khám</p> <br>
-                    <p class="time">Sáng thứ 2, sáng thứ 5, sáng thứ 7</p>
-                </div>
+            <a class="detail-info" href="#" data-toggle="modal" data-target="#myModal" id = "doctor_name">GS TS BS. Nguyễn Phúc Hưng</a>  <br>
             </div>
             <br> <br>
             <div class="info">
-            <a href="#" data-toggle="modal" data-target="#myModal" id = "doctor_name">GS TS BS. Nguyễn Phúc Hưng</a>  <br>
-                <p class="subject">Tổng giám đốc của công ti</p>
-                <div class="scheduling-container">
-                    <p class="scheduling">Lịch khám</p> <br>
-                    <p class="time">Sáng thứ 2, sáng thứ 5, sáng thứ 7</p>
-                </div>
+           <a class="detail-info" href="#" data-toggle="modal" data-target="#myModal" id = "doctor_name">GS TS BS. Nguyễn Phúc Hưng</a>  <br>
             </div>
             <br> <br>
             <div class="info">
-            <a href="#" data-toggle="modal" data-target="#myModal" id = "doctor_name">GS TS BS. Nguyễn Phúc Hưng</a>  <br>
-                <p class="subject">Tổng giám đốc của công ti</p>
-                <div class="scheduling-container">
-                    <p class="scheduling">Lịch khám</p> <br>
-                    <p class="time">Sáng thứ 2, sáng thứ 5, sáng thứ 7</p>
-                </div>
+           <a class="detail-info" href="#" data-toggle="modal" data-target="#myModal" id = "doctor_name">GS TS BS. Nguyễn Phúc Hưng</a>  <br>
             </div>
             <br> <br>
             <div class="info">
-            <a href="#" data-toggle="modal" data-target="#myModal" id = "doctor_name">GS TS BS. Nguyễn Phúc Hưng</a>  <br>
-                <p class="subject">Tổng giám đốc của công ti</p>
-                <div class="scheduling-container">
-                    <p class="scheduling">Lịch khám</p> <br>
-                    <p class="time">Sáng thứ 2, sáng thứ 5, sáng thứ 7</p>
-                </div>
+           <a class="detail-info" href="#" data-toggle="modal" data-target="#myModal" id = "doctor_name">GS TS BS. Nguyễn Phúc Hưng</a>  <br>
             </div>
+        </div> 
+        <br> <br>
+        <div class="related-data-container">
+            <button class="add-data">Thêm</button>
+            <button class="delete-data">Xóa</button>
         </div>
-        <!-- <div class="order-container">
-            <button class="order">&lt</button>
-            <button class="number">1</button>
-            <button class="order">&gt</button>
-        </div> -->
+        <br> <br>
         <div class="find">
             <h2>TÌM Y TÁ</h2> <br> <br>
             <p>Vui lòng chọn chuyên khoa cần khám hoặc tìm kiếm để nhanh hơn</p> <br>
@@ -234,46 +207,26 @@ if(!isset($_SESSION['user'])){
         <br> <br>
         <div class="info-container">
             <div class="info">
-            <a href="#" data-toggle="modal" data-target="#myModal" id = "doctor_name">GS TS BS. Nguyễn Phúc Hưng</a>  <br>
-                <p class="subject">Phó tổng giám đốc của công ti</p>
-                <div class="scheduling-container">
-                    <p class="scheduling">Lịch khám</p> <br>
-                    <p class="time">Sáng thứ 2, sáng thứ 5, sáng thứ 7</p>
-                </div>
+           <a class="detail-info" href="#" data-toggle="modal" data-target="#myModal" id = "doctor_name">GS TS BS. Nguyễn Phúc Hưng</a>  <br>
             </div>
             <br> <br>
             <div class="info">
-            <a href="#" data-toggle="modal" data-target="#myModal" id = "doctor_name">GS TS BS. Nguyễn Phúc Hưng</a>  <br>
-                <p class="subject">Phó tổng giám đốc của công ti</p>
-                <div class="scheduling-container">
-                    <p class="scheduling">Lịch khám</p> <br>
-                    <p class="time">Sáng thứ 2, sáng thứ 5, sáng thứ 7</p>
-                </div>
+           <a class="detail-info" href="#" data-toggle="modal" data-target="#myModal" id = "doctor_name">GS TS BS. Nguyễn Phúc Hưng</a>  <br>
             </div>
             <br> <br>
             <div class="info">
-            <a href="#" data-toggle="modal" data-target="#myModal" id = "doctor_name">GS TS BS. Nguyễn Phúc Hưng</a>  <br>
-                <p class="subject">Phó tổng giám đốc của công ti</p>
-                <div class="scheduling-container">
-                    <p class="scheduling">Lịch khám</p> <br>
-                    <p class="time">Sáng thứ 2, sáng thứ 5, sáng thứ 7</p>
-                </div>
+           <a class="detail-info" href="#" data-toggle="modal" data-target="#myModal" id = "doctor_name">GS TS BS. Nguyễn Phúc Hưng</a>  <br>
             </div>
             <br> <br>
             <div class="info">
-            <a href="#" data-toggle="modal" data-target="#myModal" id = "doctor_name">GS TS BS. Nguyễn Phúc Hưng</a>  <br>
-                <p class="subject">Phó tổng giám đốc của công ti</p>
-                <div class="scheduling-container">
-                    <p class="scheduling">Lịch khám</p> <br>
-                    <p class="time">Sáng thứ 2, sáng thứ 5, sáng thứ 7</p>
-                </div>
+           <a class="detail-info" href="#" data-toggle="modal" data-target="#myModal" id = "doctor_name">GS TS BS. Nguyễn Phúc Hưng</a>  <br>
             </div>
         </div>
-        <!-- <div class="order-container">
-            <button class="order">&lt</button>
-            <button class="number">1</button>
-            <button class="order">&gt</button>
-        </div> -->
+        <br> <br>
+        <div class="related-data-container">
+            <button class="add-data">Thêm</button>
+            <button class="delete-data">Xóa</button>
+        </div>
             
         </div>
         <div class="find">
@@ -312,41 +265,26 @@ if(!isset($_SESSION['user'])){
         <br> <br>
         <div class="info-container">
             <div class="info">
-            <a href="#" data-toggle="modal" data-target="#myModal" id = "doctor_name">GS TS BS. Nguyễn Phúc Hưng</a>  <br>
-                <p class="subject">Phó tổng giám đốc của công ti</p>
-                <div class="scheduling-container">
-                    <p class="scheduling">Lịch làm việc</p> <br>
-                    <p class="time">Cả tuần</p>
-                </div>
+           <a class="detail-info" href="#" data-toggle="modal" data-target="#myModal" id = "doctor_name">GS TS BS. Nguyễn Phúc Hưng</a>  <br>
             </div>
             <br> <br>
             <div class="info">
-            <a href="#" data-toggle="modal" data-target="#myModal" id = "doctor_name">GS TS BS. Nguyễn Phúc Hưng</a>  <br>
-                <p class="subject">Phó tổng giám đốc của công ti</p>
-                <div class="scheduling-container">
-                    <p class="scheduling">Lịch làm việc</p> <br>
-                    <p class="time">Cả tuần</p>
-                </div>
+            <a class="detail-info"   href="#" data-toggle="modal" data-target="#myModal" id = "doctor_name">GS TS BS. Nguyễn Phúc Hưng</a>  <br>
             </div>
             <br> <br>
             <div class="info">
-            <a href="#" data-toggle="modal" data-target="#myModal" id = "doctor_name">GS TS BS. Nguyễn Phúc Hưng</a>  <br>
-                <p class="subject">Phó tổng giám đốc của công ti</p>
-                <div class="scheduling-container">
-                    <p class="scheduling">Lịch làm việc</p> <br>
-                    <p class="time">Cả tuần</p>
-                </div>
+           <a class="detail-info" href="#" data-toggle="modal" data-target="#myModal" id = "doctor_name">GS TS BS. Nguyễn Phúc Hưng</a>  <br>
             </div>
             <br> <br>
             <div class="info">
-            <a href="#" data-toggle="modal" data-target="#myModal" id = "doctor_name">GS TS BS. Nguyễn Phúc Hưng</a>  <br>
-                <p class="subject">Phó tổng giám đốc của công ti</p>
-                <div class="scheduling-container">
-                    <p class="scheduling">Lịch làm việc</p> <br>
-                    <p class="time">Cả tuần</p>
-                </div>
+           <a class="detail-info" href="#" data-toggle="modal" data-target="#myModal" id = "doctor_name">GS TS BS. Nguyễn Phúc Hưng</a>  <br>
             </div>
             <br><br><br><br><br><br><br><br><br>
+        </div>
+        <br> <br>
+        <div class="related-data-container">
+            <button class="add-data">Thêm</button>
+            <button class="delete-data">Xóa</button>
         </div>
         </div>
         <br><br><br><br><br>
@@ -379,23 +317,24 @@ if(!isset($_SESSION['user'])){
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Thông tin bác sĩ</h4>
+                    <h2 class="modal-title">Thông tin bác sĩ</h2>
                 </div>
                 <br>
                 <br>
-                <div class="modal-body">
-                <div class="doctor-image" style="float: left;">
-                    <img src="/imagine/doctor.jpg" alt="Ảnh bác sĩ" style="max-width: 100%; height: auto;">
+            <div class="modal-body">
+                <div class="doctor-image">
+                    <img src="/imagine/doctor.jpg" alt="Ảnh bác sĩ" style="width: 100%; height: auto;">
                 </div>
-                    <div class="doctor-info" style="text-align: right;">
+                <div class="doctor-info">
                         <h2 class="doctor_name_modal">GS TS BS. Nguyễn Phúc Hưng</h2> 
-                        <br>
                         <p class="subject_modal">Tổng giám đốc của công ti</p>
                         <div class="scheduling-container">
-                            <p class="scheduling">Lịch khám</p> <br>
+                            <p class="scheduling">Lịch khám</p>
                             <p class="time_modal">Sáng thứ 2, sáng thứ 5, sáng thứ 7</p>
                         </div>
-                    </div>
+                        <p class="scheduling-patient">Bệnh nhân đang khám: </p>
+                        <p class="detail-patient">Nguyễn Trọng Kha, ...</p>
+                </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

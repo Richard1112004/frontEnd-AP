@@ -34,6 +34,7 @@ body{
     /* background-color: lightblue; */
     display: flex;
     align-items: center;
+    justify-content: center;
     color: white;
 }
 .general, .contact ,.treatment, .patient, .medicine, .device{
@@ -45,6 +46,8 @@ body{
     border: none;
     cursor: pointer;
     background-color: white;
+    /* font-size: 50px; */
+    /* text-align: left; */
 }
 .general:hover, .contact:hover, .introduce:hover ,.treatment:hover, .patient:hover, .medicine:hover, .device:hover{
     text-decoration: underline;
@@ -62,16 +65,17 @@ body{
     display: flex;
     justify-content: space-between;
     padding-left: 40px;
-    padding-right:100px;
+    /* padding-right:100px; */
 }
 .right{
-    width: 200px;
+    width: 300px;
 }
 .login{
     color: rgb(58, 8, 8);
-    height: 30px;
-    width: 90px;
-    display:flex;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     /* margin-left: 60px; */
@@ -79,8 +83,15 @@ body{
     border-radius: 10px;
     box-sizing: border-box;
 }
+.login span{
+    font-size: 18px;
+    flex: 1;
+    text-align: left;
+}
 .logout{
-    margin-left: 10px;
+    color: rgb(58, 8, 8);
+    text-align: left;
+    width: 70px;
     text-decoration: underline;
 }
 .logout:hover{

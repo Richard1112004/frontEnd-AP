@@ -17,7 +17,7 @@ body{
     color: rgb(58, 8, 8);
     margin-top:69px;
     height: 600px;
-    width: 1470px;
+    width: 100%;
     background: url(imagine/hi.webp) no-repeat;
     background-size: cover;
     background-position: center;
